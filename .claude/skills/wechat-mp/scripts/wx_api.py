@@ -114,12 +114,13 @@ class WxClient:
     def _post(self, path: str, api: str, **kw) -> dict:
         kw.setdefault("timeout", 60)
         r = self.s.post(f"{BASE}{path}?access_token={self.token()}", **kw)
-        return self._check(r.json(), api)
+        # 微信响应均为 UTF-8 但不总带 charset 声明，显式解码避免中文乱码
+        return self._check(json.loads(r.content.decode("utf-8")), api)
 
     def _get(self, path: str, api: str, **kw) -> dict:
         kw.setdefault("timeout", 30)
         r = self.s.get(f"{BASE}{path}?access_token={self.token()}", **kw)
-        return self._check(r.json(), api)
+        return self._check(json.loads(r.content.decode("utf-8")), api)
 
     # ---------------------------------------------------------------- 素材
     def upload_content_image(self, path: str | pathlib.Path) -> str:
@@ -150,6 +151,13 @@ class WxClient:
         return self._post("/cgi-bin/draft/get", "draft/get",
                           data=json.dumps({"media_id": media_id}, ensure_ascii=False).encode("utf-8"),
                           headers={"Content-Type": "application/json; charset=utf-8"})
+
+    def update_draft(self, media_id: str, article: dict, index: int = 0) -> dict:
+        """更新草稿中第 index 篇（media_id 不变）；articles 为单篇对象（非数组）。"""
+        return self._post("/cgi-bin/draft/update", "draft/update",
+                          data=json.dumps({"media_id": media_id, "index": index,
+                                           "articles": article}, ensure_ascii=False).encode("utf-8"),
+                          headers={"Content-Type": "application/json"})
 
     def delete_draft(self, media_id: str) -> dict:
         return self._post("/cgi-bin/draft/delete", "draft/delete",

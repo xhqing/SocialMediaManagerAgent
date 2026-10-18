@@ -55,11 +55,23 @@ python3 .claude/skills/wechat-mp/scripts/build_draft.py <article.md> --out tmp/m
 | 参数 | 说明 |
 |---|---|
 | `--title` | 覆盖标题（公众号标题 ≤32 字） |
-| `--author` | 作者字段（≤16 字，默认「AI+X 实战经验交流群」） |
+| `--author` | 作者字段（≤16 字，默认取凭证配置里的 author，未配置时回落兜底值） |
 | `--digest` | 摘要（≤120 字，不填默认标题+「。」） |
 | `--cover` | 指定封面图；不传则自动生成 1080×460 封面（`make_cover.py`） |
 | `--inline-math auto\|image` | 内联公式策略：`auto` 简单公式转文字、复杂转图；`image` 全转图 |
 | `--no-upload` / `--no-draft` | 只构建 / 只传图不建草稿 |
+| `--no-profile-card` | 单次关闭文末公众号名片附加 |
+| `--update-draft <media_id>` | 就地更新指定草稿（media_id 不变），不新建草稿 |
+
+## 文末公众号名片（可选）
+
+构建时可在正文末尾自动附加「**公众号名片**」（读者点击跳转公众号主页、可关注）。名片数据为**本账号专属、不进仓库**——代码只负责读取，数据存本机：
+
+1. **采集一次**：在公众号后台编辑器给任意草稿手动插入自己的「公众号名片」→ 保存草稿 → 用 `draft/get` 拉取该草稿，提取 `<section class="mp_profile_iframe_wrp">…</section>` 片段（内含 `mp-common-profile` 标签）；
+2. **存到** `~/.wechat-mp/profile_card.html`（本机文件，不进 git）；
+3. 此后构建自动附加到正文末尾（正文已含名片时跳过、避免重复）；`--no-profile-card` 可单次关闭，文件不存在时自动跳过。
+
+注意：该组件仅在**微信客户端**渲染——本地 `preview.png` 里看不到名片属正常现象，到草稿预览里验证效果。
 
 ## 内容规则（排版）
 

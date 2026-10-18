@@ -36,6 +36,16 @@ BRAND = "#B45309"       # 主色（Amber 深）
 BRAND_LIGHT = "#FDF9F2"  # 底色
 BORDER = "#EFE1C8"       # 边框
 
+# 文末公众号名片：本账号专属数据，存本机（不进 git）。
+# 采集方法见 SKILL.md「文末公众号名片」节；文件缺失或 --no-profile-card 时跳过。
+PROFILE_CARD_PATH = "~/.wechat-mp/profile_card.html"
+
+
+def load_profile_card() -> str:
+    p = pathlib.Path(PROFILE_CARD_PATH).expanduser()
+    return p.read_text(encoding="utf-8").strip() if p.exists() else ""
+
+
 STYLE = {
     "body": f"font-size:16px;line-height:1.8;color:#3f3f3f;letter-spacing:.3px;word-break:break-word;",
     "p": "margin:0 0 16px;",
@@ -271,6 +281,9 @@ def main() -> None:
                     help="内联公式处理：auto=简单的转文字、复杂的用图片；image=全部用图片")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--no-draft", action="store_true", help="只上传图片、不建草稿")
+    ap.add_argument("--no-profile-card", action="store_true", help="不在正文末尾附加公众号名片")
+    ap.add_argument("--update-draft", default=None, metavar="MEDIA_ID",
+                    help="更新现有草稿（media_id 不变），而不是新建草稿")
     ap.add_argument("--fake-upload", action="store_true",
                     help="用占位 URL 走完整流程（不调接口），用于验证最终 HTML 体积与结构")
     args = ap.parse_args()
@@ -284,6 +297,8 @@ def main() -> None:
     except Exception:
         pass
     author = args.author or cfg.get("author") or "AI+X 实战经验交流群"
+    profile_card = "" if args.no_profile_card else load_profile_card()
+    print(f"[build] 文末名片：{'已加载（%d 字符）' % len(profile_card) if profile_card else '无（跳过）'}")
 
     art = pathlib.Path(args.article).expanduser().resolve()
     base_dir = art.parent
@@ -318,6 +333,8 @@ def main() -> None:
         if img.get("data-local"):
             del img["data-local"]
     content_local = str(root).replace(' id="mp-root"', "")
+    if profile_card and "mp-common-profile" not in content_local:
+        content_local += profile_card
 
     (out_dir / "content.html").write_text(content_local, encoding="utf-8")
     preview = make_preview(content_local, out_dir, title)
@@ -366,6 +383,8 @@ def main() -> None:
                     print(f"[fake] 正文图 → {pathlib.Path(local).name}（占位 URL）")
             img["src"] = urls[local]
         content_remote = str(root).replace(' id="mp-root"', "")
+        if profile_card and "mp-common-profile" not in content_remote:
+            content_remote += profile_card
         article_payload["content"] = content_remote
         (out_dir / "content.remote.html").write_text(content_remote, encoding="utf-8")
         # 2) 封面 → 永久素材
@@ -378,6 +397,10 @@ def main() -> None:
             json.dumps({"articles": [article_payload]}, ensure_ascii=False, indent=2), encoding="utf-8")
         if client is None:
             print("[fake] 跳过 draft/add（假装上传模式）")
+        elif args.update_draft:
+            client.update_draft(args.update_draft, article_payload)
+            print(f"[draft] ✅ 已更新草稿：media_id={args.update_draft}")
+            (out_dir / "draft.txt").write_text(args.update_draft, encoding="utf-8")
         elif not args.no_draft:
             media_id = client.add_draft([article_payload])
             print(f"[draft] ✅ 已写入草稿箱：media_id={media_id}")
