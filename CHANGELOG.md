@@ -4,6 +4,13 @@
 
 ## [1.2.1] - 2026-10-15
 
+### 变更（2026-10-18：移除 `wechat-mac-ops` skill——computer-use 受限后失效）
+
+- **为什么改**：该 skill 的全部能力依赖 open-computer-use 直接驱动本机微信 Mac 客户端；按全局规则（2026-10-09 修订）computer-use 类工具**仅限 cuAgent 项目使用**，其它任何会话 / 项目不得启用 / 使用——本项目已无合规路径执行微信客户端自动化，skill 成为无法使用的死重，留着还会误导后续会话去使用受限能力，故整体移除。移除后微信客户端操作（改群名 / 改群公告 / 群内发言）回归群主手动执行（与本项目「理念和方法是你的、执行是群主的」工作原则一致）。
+- **改了什么**：① 删除 `.claude/skills/wechat-mac-ops/` 全部 7 个文件（`SKILL.md`、`references/computer-use.md`、`references/wechat-ui.md`、`scripts/` 下 `ocu.sh` / `tap.sh` / `clic.sh` / `wxgeom.py`）；② `CLAUDE.md`「你的工具」节——`social-media` 条目去掉 mac-ops 引用，原 mac-ops 条目改为「微信客户端操作不自动化、由群主手动落地」的说明；③ `social-media` skill 四处引用同步清理（description 的 NOT-for、正文「三个执行 skill」改「两个」、标准工作流第 4 步、文末分工表删行）；④ `wechat-mp` skill description 的 NOT-for 引用改注「由群主手动执行」；⑤ 本条目。
+- **不改动处（留档）**：`docs/research/social-ops/` 两份历史快照中的提及（该目录为 2026-10-14 调研原始存档、README 已标「勿维护」）与 CHANGELOG 既有条目保留不动，供溯源。
+- **版本处理**：本体维护类改动（下线 skill / 修文档），不 bump 版本、不发版（2026-10-09 规则）。
+
 ### 变更（2026-10-17：Agent 进驻子项目——新增 `AGENTS.md` 软链、子项目挂 `AGENTS.md` / `.pi` 软链）
 
 - **为什么改**：群主 2026-10-17 修订 Agent 与子项目的关系——由 2026-10-12 的「子项目不得有智能体专属文件」改为「**Agent 进驻子项目**」：智能体专属文件的实体只在 Agent 项目；子项目根目录挂两条相对路径软链接（`AGENTS.md` → `../SocialMediaManagerAgent/AGENTS.md`、`.pi` → `../SocialMediaManagerAgent/.pi`，随仓库提交），在子项目目录开会即即继承 Gatsby 的身份 / 规则 / 技能；后台开启 / 唤醒会话仍只能以 Agent 项目根目录为工作目录（新规见全局 `~/.claude/CLAUDE.md`「团队结构参考」节与 `~/.claude/docs/agents-registry.md`）。Kit 已按新规完成改动，本次核验、提交并记录。
