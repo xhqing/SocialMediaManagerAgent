@@ -55,7 +55,7 @@ class WxError(RuntimeError):
         self.errcode, self.errmsg, self.api = errcode, errmsg, api
         hint = ""
         if errcode == 40164 or "not in whitelist" in errmsg:
-            hint = "\n  → 这是 IP 白名单问题：把上面报错里的 IP 加进公众号后台「设置与开发 → 基本配置 → IP 白名单」"
+            hint = "\n  → 这是 IP 白名单问题：把上面报错里的 IP 加进「微信开发者平台 → 我的业务 → 公众号/服务号 → 基础信息 → 开发密钥」的 API IP 白名单（可填 IP 段；白名单为空也会报 40164）"
         elif errcode == 48001:
             hint = "\n  → api unauthorized：该账号没有这个接口权限（个人主体账号常见，见 SKILL.md「账号资质」节）"
         elif errcode == 40007:
