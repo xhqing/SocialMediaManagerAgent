@@ -4,6 +4,18 @@
 
 ## [1.2.1] - 2026-10-15
 
+### 变更（2026-10-19：称呼与角色统一——「群主」→「老板」、LOGO/About 旧角色清理、矩阵同步 9 平台）
+
+- **为什么改**：老板 2026-10-19 明确两点——① 对他的称呼由「群主」改为「老板」；② Gatsby 角色已是「社媒运营官」（2026-10-14 升级），但 LOGO、GitHub About 等项目资产还残留旧角色内容（LOGO 副标题「Community Manager」、About「微信社群运营智能体」），与现行定位不符。
+- **改了什么**：
+  - **称呼统一**：「群主」→「老板」，覆盖 CLAUDE.md / CLAUDE.local.md / README_cn.md / TODO.md / TODO-archive.md / MEMO.md / platforms.md / docs/community/commitment-layer.md / docs/articles/ai-trading/ / `.claude/skills/`（共 10+ 文件）；历史记录类文件不动（CHANGELOG.md、docs/research/、docs/community/announcement.txt）；批量替换后逐行清查并修复 4 处误伤（「本群主打」「【群主题】」及 2 处「其他群主」指代）；
+  - **LOGO**：`assets/logo.svg` 副标题「Community Manager」→「Social Media Manager」；
+  - **GitHub About**：description 改为社媒矩阵定位（双语），topics 更新（去 community / community-management，加 social-media / content-creation）；
+  - **矩阵同步 9 平台**（补齐 2026-10-18 决策的文档落地）：CLAUDE.md（矩阵表 +2 行、投入优先级说明、顶部与「你的位置」节列举）、README.md / README_cn.md（矩阵表、平台列举、角色描述句）、`social-media` skill 正文（X/GitHub 状态提示）、TODO-archive 标题（「社群运营官」→「社媒运营官」）、`video-editing` skill 措辞（「社群运营里」→「运营工作中」）；
+  - 本条目。
+- **待老板决定**：群公告 `docs/community/announcement.txt` 中「由群主的微信社群运营智能体 Gatsby 负责」一句仍为旧表述——改动需按公告版本管理机制 bump 版本 + 发 Release，待指示。
+- **版本处理**：本体维护类改动（称呼 / 资产 / 文档），不 bump 版本、不发版（2026-10-09 规则）。
+
 ### 新增（2026-10-18：项目根新增 `platforms.md` 运营平台清单——矩阵新增 X、GitHub）
 
 - **为什么做**：群主 2026-10-18 决定在既有矩阵（YouTube / 小红书 / 公众号 / 小绿书 / 视频号 / 微信社群 / 朋友圈）基础上新增 **X（Twitter）** 与 **GitHub** 两个运营平台，并要求在项目根目录建立专门文件登记「当前决定运营的社交媒体产品」清单——平台范围自此有独立登记入口（增减平台先改该文件）。

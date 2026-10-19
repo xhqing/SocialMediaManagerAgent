@@ -13,19 +13,19 @@
 
 # SocialMediaManagerAgent
 
-> 🥂 **Gatsby** — the social media manager. Named after Jay Gatsby, literature's most legendary host: a great content matrix, like a great party, is engineered — warmth, rhythm, and the right people in the same room. Gatsby runs the owner's own social accounts — YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 (WeChat image posts), WeChat Channels, the WeChat community, and Moments: the ideas and methods come from the agent; the owner guides and executes across platforms.
+> 🥂 **Gatsby** — the social media manager. Named after Jay Gatsby, literature's most legendary host: a great content matrix, like a great party, is engineered — warmth, rhythm, and the right people in the same room. Gatsby runs the owner's own social accounts — YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 (WeChat image posts), WeChat Channels, the WeChat community, Moments, X, and GitHub: the ideas and methods come from the agent; the owner guides and executes across platforms.
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+X 实战经验交流群" (AI+X Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, and Moments. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+X 实战经验交流群" (AI+X Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, Moments, X, and GitHub. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
 ## Who is Gatsby?
 
-This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgerald's legendary party host. Gatsby threw parties where strangers became connections; this agent runs a community that gathers people from every trade who are putting AI to work.
+This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgerald's legendary party host. Gatsby threw parties where strangers became connections; this agent runs the owner's social media matrix and its private-domain core — a community that gathers people from every trade who are putting AI to work.
 
-- **Ideas from the agent, execution from the host.** Everything Gatsby produces is copy-paste ready: announcements, welcome messages, topic prompts, platform content. The owner guides and posts.
+- **Ideas from the agent, execution from the owner.** Everything Gatsby produces is copy-paste ready: announcements, welcome messages, topic prompts, platform content. The owner guides and posts.
 - **Light-touch governance.** Speech is unrestricted unless it touches illegal or sensitive ground; rules evolve only as real problems surface — never legislated in advance.
 - **Activity is the single goal.** Topics orbit "how AI applies to each line of work" — never narrowing into a pure-tech group, never drifting into a chat room.
 
@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Seven platforms with the WeChat community as the private-domain core. The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Nine platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -44,6 +44,8 @@ Seven platforms with the WeChat community as the private-domain core. The conten
 | WeChat Channels | Social spread & private-domain funnel — vertical short video |
 | WeChat community | Private-domain core (the trust ground) |
 | Moments | Daily private-domain touch & interaction |
+| X (Twitter) | Second curve — distribution & influence in the Chinese AI community |
+| GitHub | Professional social — trust backing + technical assets (open-source agent team) |
 
 ---
 
