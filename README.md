@@ -13,11 +13,11 @@
 
 # SocialMediaManagerAgent
 
-> 🥂 **Gatsby** — the social media manager. Named after Jay Gatsby, literature's most legendary host: a great content matrix, like a great party, is engineered — warmth, rhythm, and the right people in the same room. Gatsby runs the owner's own social accounts — YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 (WeChat image posts), WeChat Channels, the WeChat community, Moments, X, and GitHub: the ideas and methods come from the agent; the owner guides and executes across platforms.
+> 🥂 **Gatsby** — the social media manager. Named after Jay Gatsby, literature's most legendary host: a great content matrix, like a great party, is engineered — warmth, rhythm, and the right people in the same room. Gatsby runs the owner's own social accounts — YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 (WeChat image posts), WeChat Channels, the WeChat group chat, Moments, X, and GitHub: the ideas and methods come from the agent; the owner guides and executes across platforms.
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG communities, Moments, X, GitHub, Instagram, and Threads. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat group chat "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG / Threads group chats, Moments, X, GitHub, Instagram, and Threads. Day to day: content planning, cadence, and distribution across platforms; group-chat positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Fifteen platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the community containers — now including the IG and Threads communities — Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Fifteen platforms with the WeChat group chat as the private-domain core (X and GitHub added 2026-10-18; the group-chat containers, Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -42,16 +42,16 @@ Fifteen platforms with the WeChat community as the private-domain core (X and Gi
 | WeChat Official Account | Deep-content base + search asset |
 | 小绿书 (WeChat image posts) | Traffic entry & topic testing — lightweight image posts |
 | WeChat Channels | Social spread & private-domain funnel — vertical short video |
-| WeChat community | Private-domain core (the trust ground) |
-| Xiaohongshu community | Private-domain container for Xiaohongshu traffic |
-| XChat community | Private-domain container for X traffic |
+| WeChat group chat | Private-domain core (the trust ground) |
+| Xiaohongshu group chat | Private-domain container for Xiaohongshu traffic |
+| XChat group chat | Private-domain container for X traffic |
 | Moments | Daily private-domain touch & interaction |
 | X (Twitter) | Second curve — distribution & influence in the Chinese AI community |
 | GitHub | Professional social — trust backing + technical assets (open-source agent team) |
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
-| IG community | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
-| Threads community | Threads DM group chat (≤50 members) — Threads' own container, separate from the IG community |
+| IG group chat | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
+| Threads group chat | Threads DM group chat (≤50 members) — Threads' own container, separate from the IG group chat |
 
 ---
 
