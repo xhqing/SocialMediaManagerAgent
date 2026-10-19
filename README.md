@@ -5,7 +5,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/Version-1.2.2-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/Version-1.3.0-blue.svg)](VERSION)
 [![Type](https://img.shields.io/badge/Type-AI%20Agent-FF1493.svg)](#)
 <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/xhqing/xhqing/main/traffic/badges/SocialMediaManagerAgent.json" alt="Visits/day (14d)" />
 
@@ -17,7 +17,7 @@
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+X 实战经验交流群" (AI+X Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, Moments, X, and GitHub. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, Moments, X, and GitHub. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
@@ -56,7 +56,7 @@ Eleven platforms with the WeChat community as the private-domain core (X and Git
 Born from the group's founding announcement (authored by the owner, 2026):
 
 - AI is reshaping every industry — whatever your line of work, AI can help; the real question is how to put it to use.
-- The group bonds over **hands-on AI experience** ("AI+X", where X is your industry): how AI applies to your own work, what it actually delivers, and the pitfalls along the way. New models and tools get shared as they land, but the focus stays on putting them to work.
+- The group bonds over **hands-on AI experience** ("AI+", where the "+" stands for your industry): how AI applies to your own work, what it actually delivers, and the pitfalls along the way. New models and tools get shared as they land, but the focus stays on putting them to work.
 - The owner's whole AI-agent team is open-sourced at [github.com/xhqing](https://github.com/xhqing/) — group members are welcome to look around anytime.
 
 ---

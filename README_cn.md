@@ -5,7 +5,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/Version-1.2.2-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/Version-1.3.0-blue.svg)](VERSION)
 [![Type](https://img.shields.io/badge/Type-AI%20Agent-FF1493.svg)](#)
 <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/xhqing/xhqing/main/traffic/badges/SocialMediaManagerAgent.json" alt="Visits/day (14d)" />
 
@@ -17,7 +17,7 @@
 
 [English](README.md)
 
-SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信社群「AI+X 实战经验交流群」为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、朋友圈、X 与 GitHub。日常工作：各平台内容策划、节奏与分发，社群定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
+SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信社群「AI+ 实战经验交流群」为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、朋友圈、X 与 GitHub。日常工作：各平台内容策划、节奏与分发，社群定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
 
 ---
 
@@ -56,7 +56,7 @@ SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信社群「AI
 定位源自群公告原文（2026）：
 
 - AI 已渗透各行各业，不管你在哪一行，AI 都能帮上忙——问题只是怎么把它用起来。
-- 以 AI 为纽带，主打 **AI 实战经验交流**（「AI+X」：AI 结合各位所在的行业，怎么用、用出什么效果、踩过哪些坑；新的模型和工具也会第一时间分享，但重点始终是把它用起来）。
+- 以 AI 为纽带，主打 **AI 实战经验交流**（「AI+」：AI 结合各位所在的行业，怎么用、用出什么效果、踩过哪些坑；新的模型和工具也会第一时间分享，但重点始终是把它用起来）。
 - 整套 AI 智能体团队全部开源在 [github.com/xhqing](https://github.com/xhqing/)，欢迎群友随时参观。
 
 ---
