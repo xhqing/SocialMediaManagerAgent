@@ -17,7 +17,7 @@
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, Moments, X, and GitHub. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat community "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, Moments, X, GitHub, and Instagram. Day to day: content planning, cadence, and distribution across platforms; community positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Eleven platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the Xiaohongshu and XChat community containers added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Twelve platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the Xiaohongshu and XChat community containers, and Instagram, added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -48,6 +48,7 @@ Eleven platforms with the WeChat community as the private-domain core (X and Git
 | Moments | Daily private-domain touch & interaction |
 | X (Twitter) | Second curve — distribution & influence in the Chinese AI community |
 | GitHub | Professional social — trust backing + technical assets (open-source agent team) |
+| Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 
 ---
 
