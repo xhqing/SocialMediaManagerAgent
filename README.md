@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Nine platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Eleven platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the Xiaohongshu and XChat community containers added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -43,6 +43,8 @@ Nine platforms with the WeChat community as the private-domain core (X and GitHu
 | 小绿书 (WeChat image posts) | Traffic entry & topic testing — lightweight image posts |
 | WeChat Channels | Social spread & private-domain funnel — vertical short video |
 | WeChat community | Private-domain core (the trust ground) |
+| Xiaohongshu community | Private-domain container for Xiaohongshu traffic |
+| XChat community | Private-domain container for X traffic |
 | Moments | Daily private-domain touch & interaction |
 | X (Twitter) | Second curve — distribution & influence in the Chinese AI community |
 | GitHub | Professional social — trust backing + technical assets (open-source agent team) |

@@ -7,7 +7,7 @@
 ### 变更（2026-10-19：正式文件术语规范 + 矩阵更新——社群容器扩展与三阵地条目）
 
 - **为什么改**：用户明确表述规范与矩阵更新——「老板」为口头用语、仅会话汇报时使用，正式文件不用口语化称谓、表达须正式通顺；矩阵四项更新：① 微信社群与朋友圈的内容形态在合法合规前提下不做限制；② 两阵地的矩阵角色 = 承接公域流量 + 作为小红书 / 小绿书 / 公众号 / 视频号的冷启动燃料；③ 视频号的内容定位 = 公众号与小绿书内容的视频形式互补；④ 社群容器扩展——除微信社群外，还包含小红书社群与 XChat 社群。
-- **改了什么**：① **术语规范**——CLAUDE.md / README_cn.md / TODO.md / TODO-archive.md / platforms.md / docs/community/commitment-layer.md / `.claude/skills/`（social-media、wechat-mp、video-editing）等正式文件中的称谓改为正式表述（内部指代用「用户」，公开治理文本用「运营团队」）；GitHub 仓库 About 描述同步修正；本机文件（CLAUDE.local.md、docs/articles/ 草稿）一并同步；② **矩阵更新**——CLAUDE.md 矩阵表与 platforms.md：微信社群、朋友圈两行「形态」改为「不限（合法合规前提下）」、「角色」更新；视频号「内容定位」更新；新增「小红书社群」「XChat 社群」两行（platforms.md 清单 9 → 11 个）；③ `social-media` skill 私域参考同步（冷启动燃料表述、内容形态不限）；④ 本条目。
+- **改了什么**：① **术语规范**——CLAUDE.md / README_cn.md / TODO.md / TODO-archive.md / platforms.md / docs/community/commitment-layer.md / `.claude/skills/`（social-media、wechat-mp、video-editing）等正式文件中的称谓改为正式表述（内部指代用「用户」，公开治理文本用「运营团队」）；GitHub 仓库 About 描述同步修正；本机文件（CLAUDE.local.md、docs/articles/ 草稿）一并同步；② **矩阵更新**——CLAUDE.md 矩阵表、platforms.md 与 README 双语矩阵摘要：微信社群、朋友圈两行「形态」改为「不限（合法合规前提下）」、「角色」更新；视频号「内容定位」更新；新增「小红书社群」「XChat 社群」两行（platforms.md 清单 9 → 11 个）；③ `social-media` skill 私域参考同步（冷启动燃料表述、内容形态不限）；④ 本条目。
 - **版本处理**：本体维护类改动；与同日群公告 v1.2.2 更新同批提交（见下条）。
 
 ### 变更（2026-10-19：群公告更新——术语与角色表述规范化，发布 v1.2.2）
