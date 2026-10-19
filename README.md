@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Fourteen platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the community containers — now including the IG community — Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Fifteen platforms with the WeChat community as the private-domain core (X and GitHub added 2026-10-18; the community containers — now including the IG and Threads communities — Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -50,7 +50,8 @@ Fourteen platforms with the WeChat community as the private-domain core (X and G
 | GitHub | Professional social — trust backing + technical assets (open-source agent team) |
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
-| IG community | In-app IG group chat (≤250 members, join by invite link) — the overseas Chinese line's private container |
+| IG community | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
+| Threads community | Public community on Threads (Communities) — Threads' own container, separate from the IG community |
 
 ---
 
