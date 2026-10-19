@@ -51,7 +51,7 @@ Fifteen platforms with the WeChat community as the private-domain core (X and Gi
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
 | IG community | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
-| Threads community | Threads DM group chat (≤50 members); public Communities rolling out gradually — Threads' own container, separate from the IG community |
+| Threads community | Threads DM group chat (≤50 members) — Threads' own container, separate from the IG community |
 
 ---
 
