@@ -17,7 +17,7 @@
 
 [English](README.md)
 
-SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊「AI+ 实战经验交流群」为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、小红书 / XChat / IG / Threads 群聊、朋友圈、X、Instagram 与 Threads。日常工作：各平台内容策划、节奏与分发，群聊定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
+SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊「AI+ 实战经验交流群」为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、小红书 / XChat / IG / Threads 群聊、朋友圈、X、Instagram、Facebook 与 Threads。日常工作：各平台内容策划、节奏与分发，群聊定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
 
 ---
 
@@ -33,7 +33,7 @@ SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊「AI
 
 ## 运营矩阵
 
-以微信群聊为私域核心的 14 平台矩阵（2026-10-18 新增 X；2026-10-19 新增小红书群聊、XChat 群聊、IG 群聊、Threads 群聊、Instagram、Threads），内容策略是「一鱼多吃」——一次生产核心素材，按平台特性分发：
+以微信群聊为私域核心的 15 平台矩阵（2026-10-18 新增 X；2026-10-19 新增小红书群聊、XChat 群聊、IG 群聊、Threads 群聊、Instagram、Threads），内容策略是「一鱼多吃」——一次生产核心素材，按平台特性分发：
 
 | 阵地 | 定位 |
 |---|---|
@@ -49,6 +49,7 @@ SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊「AI
 | X（Twitter） | 第二曲线——中文 AI 圈的内容分发与影响力 |
 | Instagram（IG） | 海外中文线——台港 / 海外华人市场（图文为主） |
 | Threads | 海外中文线的文字互动场（与 IG 同账号联动） |
+| Facebook（FB） | Reels 再分发——台湾成熟人群（随 IG 同步） |
 | IG 群聊 | IG 站内群聊（≤250 人，邀请链接加入）——Instagram 自己的站内私域容器 |
 | Threads 群聊 | Threads 站内群聊（≤50 人）——Threads 自己的容器，与 IG 群聊分开 |
 
