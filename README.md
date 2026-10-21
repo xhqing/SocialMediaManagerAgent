@@ -17,7 +17,7 @@
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat group chat "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG / Threads group chats, Moments, X, Instagram, Facebook, and Threads. Day to day: content planning, cadence, and distribution across platforms; group-chat positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat group chat "AI+ 实战经验交流群" (AI+ Hands-On Experience Exchange) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG / Threads group chats, Moments, X, Instagram, Facebook, Threads, and Bilibili. Day to day: content planning, cadence, and distribution across platforms; group-chat positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
@@ -33,7 +33,7 @@ This agent is personified as **Gatsby** — after Jay Gatsby, F. Scott Fitzgeral
 
 ## The matrix
 
-Fifteen platforms with the WeChat group chat as the private-domain core (X added 2026-10-18; the group-chat containers, Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
+Sixteen platforms with the WeChat group chat as the private-domain core (X added 2026-10-18; the group-chat containers, Instagram and Threads added 2026-10-19). The content strategy is "one fish, many dishes" — one piece of core material, reformatted for each platform:
 
 | Channel | Role |
 |---|---|
@@ -50,6 +50,7 @@ Fifteen platforms with the WeChat group chat as the private-domain core (X added
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
 | Facebook (FB) | Reels re-distribution — mature Taiwanese audience (cross-posted from IG) |
+| Bilibili | Compliance-trimmed re-release of YouTube long-form videos (mainland audience) |
 | IG group chat | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
 | Threads group chat | Threads DM group chat (≤50 members) — Threads' own container, separate from the IG group chat |
 
