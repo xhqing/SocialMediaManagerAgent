@@ -4,6 +4,12 @@
 
 ## [1.3.0] - 2026-10-19
 
+### 变更（2026-10-20：IG / Threads / FB 的私域容器加上 WeChat/Weixin）
+
+- **为什么改**：用户要求——Instagram、Threads、Facebook 三个平台的私域容器都要加上 WeChat/Weixin（大陆华人的承接 App）。
+- **改了什么**：① `platforms.md`——表格：Instagram 行改为「Instagram（台湾华人为主）/ WhatsApp（港澳华人和其它海外华人为主）/ **WeChat/Weixin（大陆华人）**」；Threads 行改为「Threads、WeChat/Weixin（大陆华人）」；Facebook 行改为「Facebook、WeChat/Weixin（大陆华人）」；② 详细说明中三个产品的「承接」行同步；③ 本条目。
+- **版本处理**：本体维护类改动，不 bump 版本、不发版（2026-10-09 规则）。
+
 ### 变更（2026-10-20：新增「主要变现方式」列）
 
 - **为什么改**：用户要求——把每个平台的主要变现方式列出来，便于横向比较。
