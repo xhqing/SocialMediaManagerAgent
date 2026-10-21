@@ -4,6 +4,12 @@
 
 ## [1.3.0] - 2026-10-19
 
+### 变更（2026-10-20：「中短视频」统一改为「短视频」）
+
+- **为什么改**：用户要求——表达统一用「短视频」，不再用「中短视频」。
+- **改了什么**：① `platforms.md`——小红书、视频号两行的形态改为「竖屏短视频」；② `CLAUDE.md`——矩阵表对应两行同步；③ `social-media` skill 的 `references/wechat-channel.md` 同步；④ `docs/research/social-ops/` 三份调研记录（01-platform-overview / 00-readme / 07-wechat-channel）同步，保持全仓库口径一致；共 12 处；⑤ 本条目。
+- **版本处理**：本体维护类改动，不 bump 版本、不发版（2026-10-09 规则）。
+
 ### 变更（2026-10-20：新增 Facebook（FB，形态 Reels））
 
 - **为什么改**：用户要求——把 FB 加入矩阵，形态定为 Reels（与前期判断一致：FB 粉丝页图文自然触及仅 1-2%，公域推荐入口在 Reels；IG Reels 可同步到 FB Reels，边际成本低）。
