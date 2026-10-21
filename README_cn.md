@@ -50,7 +50,7 @@ SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊「AI
 | Instagram（IG） | 海外中文线——台港 / 海外华人市场（图文为主） |
 | Threads | 海外中文线的文字互动场（与 IG 同账号联动） |
 | Facebook（FB） | Reels 再分发——台湾成熟人群（随 IG 同步） |
-| B站 | YouTube 长视频的合规剪辑版（面向大陆受众） |
+| B站 | YouTube 长视频与短视频的合规剪辑版（面向大陆受众） |
 | IG 群聊 | IG 站内群聊（≤250 人，邀请链接加入）——Instagram 自己的站内私域容器 |
 | Threads 群聊 | Threads 站内群聊（≤50 人）——Threads 自己的容器，与 IG 群聊分开 |
 

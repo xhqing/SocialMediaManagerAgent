@@ -50,7 +50,7 @@ Sixteen platforms with the WeChat group chat as the private-domain core (X added
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
 | Facebook (FB) | Reels re-distribution — mature Taiwanese audience (cross-posted from IG) |
-| Bilibili | Compliance-trimmed re-release of YouTube long-form videos (mainland audience) |
+| Bilibili | Compliance-trimmed re-release of YouTube long-form videos and Shorts (mainland audience) |
 | IG group chat | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
 | Threads group chat | Threads DM group chat (≤50 members) — Threads' own container, separate from the IG group chat |
 
