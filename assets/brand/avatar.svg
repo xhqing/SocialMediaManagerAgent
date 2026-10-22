@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Avatar mark: south wind">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="55%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#A8540B"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" rx="225" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="225" fill="url(#gloss)"/>
+
+  <!-- south wind: three curling strokes, curls right-aligned -->
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M248 392 H 640 a 40 40 0 1 0 -40 -40" stroke-width="34" stroke-opacity="0.82"/>
+    <path d="M248 528 H 668 a 46 46 0 1 0 -46 -46" stroke-width="46" stroke-opacity="1"/>
+    <path d="M248 664 H 612 a 36 36 0 1 0 -36 -36" stroke-width="30" stroke-opacity="0.66"/>
+  </g>
+</svg>
