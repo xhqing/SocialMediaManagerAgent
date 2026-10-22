@@ -4,6 +4,12 @@
 
 ## [1.3.0] - 2026-10-19
 
+### 修正（2026-10-22：WeChat/Weixin 作为第一私域容器不标地区）
+
+- **为什么改**：用户定——WeChat/Weixin 是**最重要的私域容器**，不管不同地区使用人数多少，都要尽量往这里引流；所以「私域容器」列里的 WeChat/Weixin 后面不再注明括号（不写「大陆华人为主」这类受众地区）。
+- **改了什么**：① `platforms.md`——清单表 6 处 WeChat/Weixin 后面的括号全部去掉（YouTube / Instagram / Threads / Facebook / GitHub 行；X 行本来无括号）；表前新增一段原则说明（WeChat/Weixin 永远是第一承接目标、不标地区）；「私域容器」列的列说明同步（WeChat/Weixin 除外、不标地区）；注 1 重写为「WeChat/Weixin 是唯一的第一承接目标 + 其它容器为次一级」；详细说明的承接行同步（YouTube / Instagram / Threads / Facebook / X / GitHub 六处标记「第一承接目标」、去掉括号）；② `CLAUDE.md`——矩阵节新增同一原则段；③ `README.md` / `README_cn.md`——矩阵表微信群聊行注明「不论受众地区、不论其它容器使用人数，引流优先往这里」（双语同步）；④ 本条目。
+- **版本处理**：本体维护类改动，不 bump 版本、不发版（2026-10-09 规则）。
+
 ### 修正（2026-10-22：GitHub 定位改为「内容仓库」+ 私域容器选 WeChat/Weixin）
 
 - **为什么改**：用户纠正——GitHub **承接其它平台的公域流量**（X / Hacker News / Reddit / 小红书 / YouTube 把人引过来），**但它不是私域容器，它是内容仓库**；仓库里可以放私域容器入口、承接其它平台来的流量。又因**目标受众仍是华人为主**，私域容器重点选 WeChat/Weixin 即可。

@@ -42,7 +42,7 @@ Eighteen platforms with the WeChat group chat as the private-domain core (X adde
 | WeChat Official Account | Deep-content base + search asset |
 | 小绿书 (WeChat image posts) | Traffic entry & topic testing — lightweight image posts |
 | WeChat Channels | Social spread & private-domain funnel — vertical short video |
-| WeChat group chat | Private-domain core (the trust ground) |
+| WeChat group chat | Private-domain core (the trust ground) — all traffic is routed here first, whatever the audience region or how popular other containers are |
 | Xiaohongshu group chat | Private-domain container for Xiaohongshu traffic |
 | XChat group chat | Private-domain container for X traffic |
 | Moments | Daily private-domain touch & interaction |
