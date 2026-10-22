@@ -50,7 +50,7 @@ Eighteen platforms with the WeChat group chat as the private-domain core (X adde
 | Instagram | Overseas Chinese line — Taiwan / Hong Kong / diaspora audiences (image-led) |
 | Threads | The text-conversation layer of the overseas Chinese line (same account as Instagram) |
 | Facebook (FB) | Reels re-distribution — mature Taiwanese audience (cross-posted from IG) |
-| GitHub | Professional social platform — trust endorsement + technical assets (the README is the content; project-driven cadence) |
+| GitHub | Content repository — catches public-domain traffic routed in from other platforms plus trust endorsement / technical assets (not a private-domain container; the private entry points to WeChat/Weixin) |
 | Bilibili | Compliance-trimmed re-release of YouTube long-form videos and Shorts (mainland audience) |
 | Douyin | Exposure and topic-testing ground for short-video clips (mainland audience) |
 | IG group chat | In-app IG group chat (≤250 members, join by invite link) — Instagram's own private container |
