@@ -31,3 +31,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# 个人真人头像（含本人肖像，仅本机保存；2026-10-22）
+assets/brand/photo/
