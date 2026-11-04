@@ -2,6 +2,17 @@
 
 本文件记录本项目（SocialMediaManagerAgent / Gatsby）每次文件增删改查的变更，写清「为什么改」和「改了什么」。版本号以项目根 `VERSION` 文件为唯一权威（当前 1.4.0，与群公告版本号一致——2026-10-02 起两者统一为一套编号，工具强制）。
 
+### 新增（中文检查两个 skill：病句辨析 + 排版 lint，2026-11-04）
+
+- **为什么改**：用户 2026-11-04 提出「全网看看有没有让 AI 掌握普通话语法的 skill 或工具」。调研结论：Skill 侧没有官方或大厂出品，但有两个可用的个人仓库——一个专查病句、一个自带可跑的排版脚本；引擎侧有 ChineseErrorCorrector（4B，需部署）与 LanguageTool（实测搭配 / 冗余能查、7 条结构性病句全漏），都是外挂形态。本项目的实际缺口在定稿前检查：去 AI 味已有（`lieflat-less-ai-tone` / `humanizer`），病句与排版两条线是空的，故先装最轻、零依赖的这两个。
+- **改了什么**：
+  - 新增 `.claude/skills/chinese-grammar-proofreader/`（SKILL.md + `references/casebook.md` + `references/source-basis.md` + README.md + LICENSE），**上游原文照装、未改一字**（保证后续能直接跟进上游；MIT，Copyright (c) 2026 orange4664）；
+  - 新增 `.claude/skills/chinese-format-lint/`（SKILL.md + README.md + `scripts/lint.mjs` + LICENSE），**只取上游脚本**（MIT，Copyright (c) 2026 fwqaaq），未引入其《中文技术文档写作规范》正文——那套面向技术文档文风，与公众号 / 小红书内容不是一回事；SKILL.md 与 README.md 为本项目自写（13 条规则清单、处理流程、边界）；
+  - `CLAUDE.md`「你的工具」补两条 skill 说明与一条检查顺序纪律（文风 → 语法 → 排版）。
+- **验证**（2026-11-04 实测）：两条 description 均过 `check_description.py`（364 / 232 字符，上限 1024）；`lint.mjs` 在本机 Node v22 跑通——样例稿 14 处命中全部按预期报出（12 error + 2 warning，退出码 1），`--fix` 修掉其中 9 处、余 3 处结构性项照常报。
+- **边界**：两个 skill 都是「定稿前最后几道检查」的定位，不改变写作流程本身；后端引擎（ChineseErrorCorrector / LanguageTool 自托管）本轮未装，需要时再评估。
+- **不发版**：项目本体维护类改动不驱动版本与公告（沿用 2026-10-09 口径），VERSION 与群公告仍为 1.4.0。
+
 ### 新增（CI 门禁：validate 检查 + main 分支 strict 保护）
 
 - **为什么改**：用户 2026-11-03 立规「新建仓库一律必须 strict 模式的 PR CI」，并要求 28 个不合规的存量仓库统一执行最新标准。本项目此前在 PR 上没有门禁——改动合进 main 全靠人工把关，PR 可以拿旧 main 上通过的检查直接合并，回归防护存在缺口。本次补齐团队要求的「三件套」：PR 上真实跑的 CI 检查 + 挂成 required status check + `required_status_checks.strict = true`。
