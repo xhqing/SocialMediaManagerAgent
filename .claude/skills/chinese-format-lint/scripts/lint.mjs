@@ -9,7 +9,7 @@ const FILENAME_EXCEPTIONS = new Set([
   'CHANGELOG',
   'CONTRIBUTING',
   'SKILL',
-  'CLAUDE',
+  'AGENTS',
   'CODE_OF_CONDUCT',
   'SECURITY',
 ]);

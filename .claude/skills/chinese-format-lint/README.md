@@ -6,7 +6,7 @@
 
 脚本 `scripts/lint.mjs` 取自 [fwqaaq/chinese-tech-writing](https://github.com/fwqaaq/chinese-tech-writing)（MIT，Copyright (c) 2026 fwqaaq）。
 
-本项目**只取这个脚本**，没有引入它的《中文技术文档写作规范》正文与 SKILL.md。技术文档文风那套规范跟本项目的公众号 / 小红书内容不是一回事；本项目的内容规则另有 `CLAUDE.md` 与 `social-media` skill 管。
+本项目**只取这个脚本**，没有引入它的《中文技术文档写作规范》正文与 SKILL.md。技术文档文风那套规范跟本项目的公众号 / 小红书内容不是一回事；本项目的内容规则另有 `AGENTS.md` 与 `social-media` skill 管。
 
 ## 用法
 
