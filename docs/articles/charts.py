@@ -242,6 +242,54 @@ def fig_repeat_effect() -> None:
     plt.close(fig)
 
 
+def fig_t_distribution() -> None:
+    """图 6：$H_0$ 下的 t 分布——观测到的 t 落在哪、p 值多大。"""
+    from scipy import stats
+
+    n = 45
+    df = n - 1
+    t_obs = EV / math.sqrt(SIGMA**2 / n)          # ≈2.02
+    p_two = 2 * (1 - stats.t.cdf(t_obs, df))      # ≈0.049
+
+    fig, axes = plt.subplots(1, 2, figsize=(9.8, 3.9), gridspec_kw={"wspace": 0.3})
+
+    # 左：H0 下的分布 + 观测值 + 双侧尾巴
+    ax = axes[0]
+    x = np.linspace(-4.5, 4.5, 900)
+    y = stats.t.pdf(x, df)
+    ax.plot(x, y, color="#1f4e79", lw=2)
+    ax.fill_between(x[x >= t_obs], y[x >= t_obs], color="#d62728", alpha=0.3,
+                    label=f"两侧尾巴合计 p ≈ {p_two:.3f}")
+    ax.fill_between(x[x <= -t_obs], y[x <= -t_obs], color="#d62728", alpha=0.3)
+    ax.axvline(t_obs, color="#d62728", ls="--", lw=1.4)
+    ax.annotate(f"观测到 t ≈ {t_obs:.2f}",
+                xy=(t_obs, 0.03), xytext=(2.9, 0.26),
+                arrowprops=dict(arrowstyle="->", color="#d62728"),
+                color="#d62728", fontsize=9)
+    ax.set_title(f"$H_0$（没有优势）成立时，t 会围着 0 随机波动（n={n}）", fontsize=10)
+    ax.set_xlabel("t 值")
+    ax.set_ylabel("概率密度")
+    ax.set_ylim(0, 0.50)
+    ax.legend(frameon=False, fontsize=9, loc="upper left")
+    ax.text(-4.3, 0.22,
+            "t 越大，落在尾巴里的概率（p）越小，\n也就越不像运气", fontsize=8.5, va="top")
+
+    # 右：不同自由度的尾巴厚度
+    ax = axes[1]
+    ax.plot(x, stats.t.pdf(x, 9), color="#c55a11", lw=1.8, label="n=10（df=9）")
+    ax.plot(x, stats.t.pdf(x, 44), color="#1f4e79", lw=1.8, label="n=45（df=44）")
+    ax.plot(x, stats.norm.pdf(x), color="#7f7f7f", lw=1.6, ls="--", label="正态（n 很大）")
+    ax.axvline(t_obs, color="#d62728", ls=":", lw=1.2)
+    ax.set_title("样本越少尾巴越厚：同样的 t 更难算显著", fontsize=10)
+    ax.set_xlabel("t 值")
+    ax.set_ylabel("概率密度")
+    ax.set_ylim(0, 0.50)
+    ax.legend(frameon=False, fontsize=9)
+
+    fig.savefig(OUT / "t-distribution.png")
+    plt.close(fig)
+
+
 # ---------------------------------------------------------------- 数字复核
 def check_numbers() -> None:
     print(f"EV = {EV:+.4f}   E[R²] = {ER2:.4f}   σ = {SIGMA:.4f}")
@@ -249,6 +297,10 @@ def check_numbers() -> None:
     print(f"精确凯利 f* = {fstar:.4f}   近似 f* = EV/E[R²] = {EV/ER2:.4f}   2f* = {2*fstar:.4f}")
     print(f"精确临界点 f_c = 0.4901（本脚本图 3 数值求解同值）")
     print(f"t=2 所需样本：n ≈ 4σ²/EV² = {4*SIGMA**2/EV**2:.1f} 笔")
+    from scipy import stats
+    t_obs = EV / math.sqrt(SIGMA**2 / 45)
+    print(f"图 6：n=45 时 t = {t_obs:.3f}，双侧 p = {2*(1-stats.t.cdf(t_obs, 44)):.4f}；"
+          f"n=10 时 p = {2*(1-stats.t.cdf(t_obs, 9)):.4f}；正态近似 p = {2*(1-stats.norm.cdf(t_obs)):.4f}")
     print(f"{'f':>6}{'真实g/笔':>12}{'50笔真实':>12}{'50笔错误公式':>14}")
     for f in (0.02, 0.10, 0.25, 0.40, 0.50, 0.60):
         print(f"{f*100:>5.0f}%{g_exact(f)*100:>11.3f}%{'×%.4f' % math.exp(50*g_exact(f)):>12}"
@@ -263,5 +315,6 @@ if __name__ == "__main__":
     fig_growth_curve()
     fig_equity_curves()
     fig_repeat_effect()
+    fig_t_distribution()
     check_numbers()
     print("\n图已生成 →", OUT)
