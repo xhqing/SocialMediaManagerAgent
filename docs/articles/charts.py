@@ -29,6 +29,21 @@ matplotlib.rcParams["axes.unicode_minus"] = False
 matplotlib.rcParams["figure.dpi"] = 200
 matplotlib.rcParams["savefig.bbox"] = "tight"
 
+# 统一深色主题：背景纯黑，线条与文字用浅色（2026-11-07 用户立规）
+matplotlib.style.use("dark_background")
+matplotlib.rcParams.update({
+    "figure.facecolor": "black",
+    "axes.facecolor": "black",
+    "savefig.facecolor": "black",
+    "axes.edgecolor": "#D1D5DB",
+    "axes.labelcolor": "#F3F4F6",
+    "text.color": "#F3F4F6",
+    "xtick.color": "#D1D5DB",
+    "ytick.color": "#D1D5DB",
+    "grid.color": "#4B5563",
+    "savefig.pad_inches": 0.28,
+})
+
 OUT = pathlib.Path(__file__).parent / "img"
 OUT.mkdir(exist_ok=True)
 
@@ -52,8 +67,9 @@ def g_naive(f: float) -> float:
     return math.log(1 + f * EV)
 
 
-C_BLUE, C_DARK, C_GREEN = "#2563EB", "#1E3A8A", "#059669"
-C_RED, C_ORANGE, C_GRAY = "#DC2626", "#D97706", "#9CA3AF"
+# 深色背景配色：线条与文字要亮，深色系在纯黑上不可读
+C_BLUE, C_DARK, C_GREEN = "#60A5FA", "#E5E7EB", "#34D399"
+C_RED, C_ORANGE, C_GRAY = "#F87171", "#FBBF24", "#9CA3AF"
 
 # 图 1：样本不够时，什么曲线都像有优势 -------------------------------------------------
 
@@ -105,7 +121,7 @@ def fig_trimmed_mean() -> None:
     for k, m, b in zip(ks, means, bars):
         ax.text(k, m + (0.03 if m >= 0 else -0.06), f"{m:+.2f}",
                 ha="center", va="bottom" if m >= 0 else "top", fontsize=9)
-    ax.axhline(0, color="#111827", linewidth=1.0)
+    ax.axhline(0, color="#9CA3AF", linewidth=1.0)
     ax.set_xticks(ks)
     ax.set_xticklabels([f"去掉最好\n的 {k} 笔" if k else "原样本\n（25 笔）" for k in ks], fontsize=9)
     ax.set_ylim(-0.45, 0.55)
@@ -131,14 +147,14 @@ def fig_growth_curve() -> None:
     f_crit = (lo + hi) / 2
 
     fig, ax = plt.subplots(figsize=(6.8, 4.2))
-    ax.axhline(0, color="#111827", linewidth=1.0)
+    ax.axhline(0, color="#9CA3AF", linewidth=1.0)
     ax.axvspan(f_crit, 0.8, color=C_RED, alpha=0.07, linewidth=0)
     ax.plot(fs, gs, color=C_BLUE, linewidth=2.2, label="真实增长率 g(f)")
     ax.plot(fs, naive, color=C_RED, linewidth=1.4, linestyle="--",
             label="错误算法隐含的增长率 ln(1+f·EV)")
 
     ax.plot([0.25], [g_exact(0.25)], "o", color=C_DARK, markersize=6)
-    bbox = dict(facecolor="white", edgecolor="none", alpha=0.85)
+    bbox = dict(facecolor="#0B1220", edgecolor="none", alpha=0.85)
     ax.annotate(f"最优 f* = 25%\ng = +{g_exact(0.25)*100:.2f}%/笔",
                 xy=(0.25, g_exact(0.25)), xytext=(0.28, 0.12), fontsize=9, color=C_DARK,
                 bbox=bbox, arrowprops=dict(arrowstyle="->", color=C_DARK, lw=1.0))
@@ -167,14 +183,14 @@ def fig_equity_curves() -> None:
     bets = np.arange(0, 51)
     rows = [(0.02, C_GRAY), (0.10, C_GREEN), (0.25, C_DARK), (0.50, C_ORANGE), (0.60, C_RED)]
 
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.9))
+    fig, axes = plt.subplots(1, 2, figsize=(10.0, 3.9), gridspec_kw={"wspace": 0.32})
     for f, c in rows:
         curve = np.exp(bets * g_exact(f))
         lab = f"f = {f*100:.0f}%  → ×{curve[-1]:.2f}"
         axes[0].plot(bets, curve, color=c, linewidth=2.0 if f in (0.25, 0.60) else 1.4, label=lab)
         axes[1].plot(bets, curve, color=c, linewidth=2.0 if f in (0.25, 0.60) else 1.4, label=lab)
 
-    axes[0].axhline(1, color="#111827", linewidth=0.8, linestyle=":")
+    axes[0].axhline(1, color="#9CA3AF", linewidth=0.8, linestyle=":")
     axes[0].set_ylim(0, 10.5)
     axes[0].set_title("看倍数：最优比例跑到 9.8 倍", fontsize=11)
     axes[0].set_ylabel("账户倍数 Wn/W0")
@@ -189,7 +205,7 @@ def fig_equity_curves() -> None:
     for ax in axes:
         ax.set_xlabel("笔数")
         ax.grid(alpha=0.25)
-        ax.legend(fontsize=8, loc="lower left" if ax is axes[0] else "upper left", framealpha=0.9)
+        ax.legend(fontsize=8, loc="upper left" if ax is axes[0] else "lower left", framealpha=0.9)
     fig.suptitle("同一套方法、只改下注比例：50 笔之后的五种命运", fontsize=12, y=1.02)
     fig.savefig(OUT / "equity-curves.png")
     plt.close(fig)
@@ -198,7 +214,7 @@ def fig_equity_curves() -> None:
 # 图 5：重复次数的乘法效应 + 频率是双向放大器 -------------------------------------------
 
 def fig_repeat_effect() -> None:
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.9))
+    fig, axes = plt.subplots(1, 2, figsize=(10.0, 3.9), gridspec_kw={"wspace": 0.32})
 
     ns = np.arange(0, 101)
     for gg, c in [(0.01, C_GRAY), (0.03, C_BLUE), (0.05, C_DARK)]:
@@ -207,7 +223,7 @@ def fig_repeat_effect() -> None:
     axes[0].set_ylim(0.9, 200)
     axes[0].annotate("g = 3%：\n5 笔 ×1.16\n50 笔 ×4.48", xy=(50, math.exp(1.5)),
                      xytext=(62, 1.8), fontsize=9, color=C_BLUE,
-                     bbox=dict(facecolor="white", edgecolor="none", alpha=0.85),
+                     bbox=dict(facecolor="#0B1220", edgecolor="none", alpha=0.85),
                      arrowprops=dict(arrowstyle="->", color=C_BLUE, lw=1.0))
     axes[0].set_title("每多做一次，就多乘一次", fontsize=11)
     axes[0].set_xlabel("笔数 n")
@@ -257,15 +273,15 @@ def fig_t_distribution() -> None:
     ax = axes[0]
     x = np.linspace(-4.5, 4.5, 900)
     y = stats.t.pdf(x, df)
-    ax.plot(x, y, color="#1f4e79", lw=2)
-    ax.fill_between(x[x >= t_obs], y[x >= t_obs], color="#d62728", alpha=0.3,
+    ax.plot(x, y, color=C_BLUE, lw=2)
+    ax.fill_between(x[x >= t_obs], y[x >= t_obs], color=C_RED, alpha=0.3,
                     label=f"两侧尾巴合计 p ≈ {p_two:.3f}")
-    ax.fill_between(x[x <= -t_obs], y[x <= -t_obs], color="#d62728", alpha=0.3)
-    ax.axvline(t_obs, color="#d62728", ls="--", lw=1.4)
+    ax.fill_between(x[x <= -t_obs], y[x <= -t_obs], color=C_RED, alpha=0.3)
+    ax.axvline(t_obs, color=C_RED, ls="--", lw=1.4)
     ax.annotate(f"观测到 t ≈ {t_obs:.2f}",
                 xy=(t_obs, 0.03), xytext=(2.9, 0.26),
-                arrowprops=dict(arrowstyle="->", color="#d62728"),
-                color="#d62728", fontsize=9)
+                arrowprops=dict(arrowstyle="->", color=C_RED),
+                color=C_RED, fontsize=9)
     ax.set_title(f"$H_0$（没有优势）成立时，t 会围着 0 随机波动（n={n}）", fontsize=10)
     ax.set_xlabel("t 值")
     ax.set_ylabel("概率密度")
@@ -276,10 +292,10 @@ def fig_t_distribution() -> None:
 
     # 右：不同自由度的尾巴厚度
     ax = axes[1]
-    ax.plot(x, stats.t.pdf(x, 9), color="#c55a11", lw=1.8, label="n=10（df=9）")
-    ax.plot(x, stats.t.pdf(x, 44), color="#1f4e79", lw=1.8, label="n=45（df=44）")
-    ax.plot(x, stats.norm.pdf(x), color="#7f7f7f", lw=1.6, ls="--", label="正态（n 很大）")
-    ax.axvline(t_obs, color="#d62728", ls=":", lw=1.2)
+    ax.plot(x, stats.t.pdf(x, 9), color=C_ORANGE, lw=1.8, label="n=10（df=9）")
+    ax.plot(x, stats.t.pdf(x, 44), color=C_BLUE, lw=1.8, label="n=45（df=44）")
+    ax.plot(x, stats.norm.pdf(x), color=C_GRAY, lw=1.6, ls="--", label="正态（n 很大）")
+    ax.axvline(t_obs, color=C_RED, ls=":", lw=1.2)
     ax.set_title("样本越少尾巴越厚：同样的 t 更难算显著", fontsize=10)
     ax.set_xlabel("t 值")
     ax.set_ylabel("概率密度")
