@@ -103,7 +103,7 @@ def fig_sample_noise() -> None:
     ax.set_title("样本不够时，“平均为正”可能只是噪声", fontsize=12)
     ax.grid(alpha=0.25)
     ax.legend(fontsize=8, loc="upper right", framealpha=0.9)
-    fig.savefig(OUT / "sample-noise.png")
+    fig.savefig(OUT / "sample-noise-dark.png")
     plt.close(fig)
 
 
@@ -128,7 +128,7 @@ def fig_trimmed_mean() -> None:
     ax.set_ylabel("剩余样本的平均每笔盈亏（R）")
     ax.set_title("同一个“正期望”样本：去掉最好的 4 笔就转负", fontsize=12)
     ax.grid(axis="y", alpha=0.25)
-    fig.savefig(OUT / "trimmed-mean.png")
+    fig.savefig(OUT / "trimmed-mean-dark.png")
     plt.close(fig)
 
 
@@ -173,7 +173,7 @@ def fig_growth_curve() -> None:
     ax.set_title("同一条方法：下注比例过了临界点，赚钱变亏钱", fontsize=12)
     ax.grid(alpha=0.25)
     ax.legend(fontsize=9, loc="upper left")
-    fig.savefig(OUT / "growth-curve.png")
+    fig.savefig(OUT / "growth-curve-dark.png")
     plt.close(fig)
 
 
@@ -207,7 +207,7 @@ def fig_equity_curves() -> None:
         ax.grid(alpha=0.25)
         ax.legend(fontsize=8, loc="upper left" if ax is axes[0] else "lower left", framealpha=0.9)
     fig.suptitle("同一套方法、只改下注比例：50 笔之后的五种命运", fontsize=12, y=1.02)
-    fig.savefig(OUT / "equity-curves.png")
+    fig.savefig(OUT / "equity-curves-dark.png")
     plt.close(fig)
 
 
@@ -254,7 +254,7 @@ def fig_repeat_effect() -> None:
     axes[1].grid(axis="y", alpha=0.25)
     axes[1].legend(fontsize=8, loc="upper left")
     fig.suptitle("重复次数是放大器：把有效的放大，也把无效的放大", fontsize=12, y=1.02)
-    fig.savefig(OUT / "repeat-effect.png")
+    fig.savefig(OUT / "repeat-effect-dark.png")
     plt.close(fig)
 
 
@@ -302,7 +302,7 @@ def fig_t_distribution() -> None:
     ax.set_ylim(0, 0.50)
     ax.legend(frameon=False, fontsize=9)
 
-    fig.savefig(OUT / "t-distribution.png")
+    fig.savefig(OUT / "t-distribution-dark.png")
     plt.close(fig)
 
 
