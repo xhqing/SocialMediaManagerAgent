@@ -86,7 +86,7 @@ The commitment layer is not implemented yet, but its design is public ([commitme
 | Agent | Role |
 |---|---|
 | **Gatsby** (this project) | Social media operation — content, cadence, and retrospectives for the owner's accounts |
-| Kit (ExecutiveAssistantAgent) | Executive assistant — gig hunting & miscellaneous ops |
+| Kit (assistant-agent) | Executive assistant — gig hunting & miscellaneous ops |
 
 Gatsby reports **directly to the owner**, outside all three squads — the matrix is the owner's own ground, not a sales-pipeline asset. (Channel-acquisition content for digital products belongs to Buzz of the digital-product sales squad; Gatsby runs the long-term operation of the owner's own accounts and the private-domain base — overlapping platforms, different objectives.)
 
