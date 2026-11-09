@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 变更（项目更名为 social-agent，2026-11-09）
+
+- **为什么改**：用户 2026-11-09 正式规定 agent 项目命名统一为 `<职责>-agent`（全小写、连字符），项目是不是 Agent 项目改由 `README.md` 的 `Type-AI Agent` 徽章判定。本项目（Gatsby）由 `SocialMediaManagerAgent` 更名为 `social-agent`——名字更短、一眼看得出是社媒运营。
+- **改了什么**：① 本地目录与 GitHub 仓库更名为 `social-agent`（旧 URL 自动重定向）；② `README.md` / `README_cn.md`（标题、logo alt、正文自称、署名链接）、`AGENTS.md` 标题、`docs/community/announcement.txt` 里的版本发布地址同步改名；③ 全局注册表、`xhqing` 主页名册、`assistant-agent` 项目里引用本项目的文字同批更新。
+
 ### 变更（Kit 项目更名为 assistant-agent，2026-11-09）
 
 - **为什么改**：Kit 的 Agent 项目 2026-11-09 由 `ExecutiveAssistantAgent` 更名为 `assistant-agent`——项目名只求「尽可能简单、能体现主要职责」，不再要求以 `Agent` 结尾；项目性质改由 `README.md` 的 `Type-AI Agent` 徽章判定，与名字无关。本仓库双语 README 的团队协作关系表里列着各 agent 的项目名，不同步就会指向旧名。

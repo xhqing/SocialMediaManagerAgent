@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.svg" alt="SocialMediaManagerAgent" width="640">
+  <img src="assets/logo.svg" alt="social-agent" width="640">
 </div>
 
 <div align="center">
@@ -10,13 +10,13 @@
 
 </div>
 
-# SocialMediaManagerAgent
+# social-agent
 
 > 🥂 **Gatsby** —— 社媒运营官。名字取自《了不起的盖茨比》的主人公 Jay Gatsby：文学史上最著名的派对主人。好的内容矩阵和好的派对一样，是被“设计”出来的——合适的温度、节奏，和对的人聚在同一个房间。Gatsby 负责运营社媒账号矩阵：YouTube、小红书、公众号、小绿书、视频号、微信群聊、朋友圈、X——理念和方法由智能体提出，各平台的落地执行由人工完成。
 
 [English](README.md)
 
-SocialMediaManagerAgent 负责运营社媒账号矩阵——以微信群聊“AI 实战派”为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、小红书 / XChat / IG / Threads 群聊、朋友圈、X、GitHub、Instagram、Facebook、Threads、B站 与抖音。日常工作：各平台内容策划、节奏与分发，群聊定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
+social-agent 负责运营社媒账号矩阵——以微信群聊“AI 实战派”为私域核心，覆盖 YouTube、小红书、公众号、小绿书、视频号、小红书 / XChat / IG / Threads 群聊、朋友圈、X、GitHub、Instagram、Facebook、Threads、B站 与抖音。日常工作：各平台内容策划、节奏与分发，群聊定位与群规迭代、新人欢迎流程、话题日历、内容整理、运营复盘。全程由人工把关与执行——发出去的每一条内容都经人工确认。
 
 ---
 
@@ -96,4 +96,4 @@ Gatsby **直属用户**，在团队三个小组之外——社媒矩阵是用户
 
 版权所有 (c) 2026 xhqing and contributors，基于 [MIT License](LICENSE.md) 授权。
 
-**署名要求**：如你基于本项目衍生或再分发，请保留版权声明与许可文件，并注明来源：[SocialMediaManagerAgent](https://github.com/xhqing/SocialMediaManagerAgent)。
+**署名要求**：如你基于本项目衍生或再分发，请保留版权声明与许可文件，并注明来源：[social-agent](https://github.com/xhqing/social-agent)。
