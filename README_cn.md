@@ -94,6 +94,6 @@ Gatsby **直属用户**，在团队三个小组之外——社媒矩阵是用户
 
 ## 许可与署名
 
-版权所有 (c) 2026 xhqing <https://github.com/xhqing>，基于 [MIT License](LICENSE.md) 授权。
+版权所有 (c) 2026 xhqing and contributors，基于 [MIT License](LICENSE.md) 授权。
 
 **署名要求**：如你基于本项目衍生或再分发，请保留版权声明与许可文件，并注明来源：[SocialMediaManagerAgent](https://github.com/xhqing/SocialMediaManagerAgent)。

@@ -94,6 +94,6 @@ Gatsby reports **directly to the owner**, outside all three squads — the matri
 
 ## License & Attribution
 
-Copyright (c) 2026 xhqing <https://github.com/xhqing>. Licensed under the [MIT License](LICENSE.md).
+Copyright (c) 2026 xhqing and contributors. Licensed under the [MIT License](LICENSE.md).
 
 **Attribution:** If you derive from or redistribute this project, please retain the copyright notice and license file, and credit the source: [SocialMediaManagerAgent](https://github.com/xhqing/SocialMediaManagerAgent).
