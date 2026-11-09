@@ -32,5 +32,5 @@ AI 正在快速改变各行各业。不管你在哪一行，AI 都能帮上忙�
 ----------------------------------------
 版本：v1.4.0
 发布日期：2026-10-22
-历史版本与修订记录：github.com/xhqing/SocialMediaManagerAgent/releases
+历史版本与修订记录：github.com/xhqing/social-agent/releases
 ----------------------------------------

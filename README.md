@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.svg" alt="SocialMediaManagerAgent" width="640">
+  <img src="assets/logo.svg" alt="social-agent" width="640">
 </div>
 
 <div align="center">
@@ -10,13 +10,13 @@
 
 </div>
 
-# SocialMediaManagerAgent
+# social-agent
 
 > 🥂 **Gatsby** — the social media manager. Named after Jay Gatsby, literature's most legendary host: a great content matrix, like a great party, is engineered — warmth, rhythm, and the right people in the same room. Gatsby runs the owner's own social accounts — YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 (WeChat image posts), WeChat Channels, the WeChat group chat, Moments, and X: the ideas and methods come from the agent; the owner guides and executes across platforms.
 
 [简体中文](README_cn.md)
 
-SocialMediaManagerAgent owns the operation of the owner's social media matrix — centered on the WeChat group chat "AI 实战派" (AI Practitioners) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG / Threads group chats, Moments, X, GitHub, Instagram, Facebook, Threads, Bilibili, and Douyin. Day to day: content planning, cadence, and distribution across platforms; group-chat positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
+social-agent owns the operation of the owner's social media matrix — centered on the WeChat group chat "AI 实战派" (AI Practitioners) as its private-domain core, spanning YouTube, Xiaohongshu, the WeChat Official Account, 小绿书 image posts, WeChat Channels, the Xiaohongshu / XChat / IG / Threads group chats, Moments, X, GitHub, Instagram, Facebook, Threads, Bilibili, and Douyin. Day to day: content planning, cadence, and distribution across platforms; group-chat positioning and rule iteration; welcome flows; topic calendars; content curation; and operating retrospectives. The owner stays in the loop as guide and executor — everything posted goes through their hands.
 
 ---
 
@@ -96,4 +96,4 @@ Gatsby reports **directly to the owner**, outside all three squads — the matri
 
 Copyright (c) 2026 xhqing and contributors. Licensed under the [MIT License](LICENSE.md).
 
-**Attribution:** If you derive from or redistribute this project, please retain the copyright notice and license file, and credit the source: [SocialMediaManagerAgent](https://github.com/xhqing/SocialMediaManagerAgent).
+**Attribution:** If you derive from or redistribute this project, please retain the copyright notice and license file, and credit the source: [social-agent](https://github.com/xhqing/social-agent).
