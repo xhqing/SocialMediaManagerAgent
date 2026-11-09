@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 变更（Kit 项目更名为 assistant-agent，2026-11-09）
+
+- **为什么改**：Kit 的 Agent 项目 2026-11-09 由 `ExecutiveAssistantAgent` 更名为 `assistant-agent`——项目名只求「尽可能简单、能体现主要职责」，不再要求以 `Agent` 结尾；项目性质改由 `README.md` 的 `Type-AI Agent` 徽章判定，与名字无关。本仓库双语 README 的团队协作关系表里列着各 agent 的项目名，不同步就会指向旧名。
+- **改了什么**：`README.md` / `README_cn.md` 协作关系表里 Kit 那一行的项目名 `ExecutiveAssistantAgent` → `assistant-agent`（职责描述不变）。`docs/research/social-ops/` 下两份历史快照里的旧名属历史记录，不动。
+
 本文件记录本项目（SocialMediaManagerAgent / Gatsby）每次文件增删改查的变更，写清「为什么改」和「改了什么」。版本号以项目根 `VERSION` 文件为唯一权威（当前 1.4.0，与群公告版本号一致——2026-10-02 起两者统一为一套编号，工具强制）。
 
 ### 新增（写作样本：博客抓取脚本 + 句子习惯画像，2026-11-07）
