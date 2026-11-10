@@ -35,7 +35,8 @@ RAW_ONLY=0
 MODE="record"                         # record | check | list
 
 usage() {
-  sed -n '2,24p' "$0" | sed 's/^# \{0,1\}//'
+  # 打印文件开头的连续注释行（跳过 shebang、遇到第一条非注释就停）
+  awk 'NR>1 && /^#/ { sub(/^# ?/, ""); print; next } NR>1 { exit }' "$0"
 }
 
 while [[ $# -gt 0 ]]; do
