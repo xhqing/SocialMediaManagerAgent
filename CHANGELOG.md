@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### 变更（补一条 blog 发版归属规则，记录漏发版的教训，2026-11-11）
+
+- **为什么改**：`settle-repo-check` 在会话静止时报了一条「有功能类改动但版本未发布: blog (v1.1.0, 5 个待发布提交)」。实测确认那 5 个提交（搭自动发布链路那轮）确实漏了发版：VERSION 已 bump 到 1.1.0，但 GitHub Release 没发，最后由用户自己补的（tag `v1.1.0` + Release 均已在 2026-11-11 15:29 完成，内容与当前 HEAD 一致）。
+- **根因**：那轮博客改动走的是「裸 `git commit` + PR 合并」，绕过了 commit skill 第 10 步——发版的自动衔接只挂在那个流程末尾，绕过去就没人做了；本会话还同时跑了两轮原生 `git commit` 改文档，风险一样。
+- **改了什么**：`AGENTS.md`「子项目清单」节在 blog 段落里加一条「**blog 的发版归本项目**」：改动含 `feat` / `fix` 且版本就绪时走 `/release`（tag + GitHub Release，notes 取 CHANGELOG）；日常 `sync:` 提交不触发发版（2026-10-13 门禁）；并写明教训——**合并含 feat / fix 的 PR 后主动跑一次发版检查**（`gh release view v$(cat VERSION) -R <repo>`），别等 `settle-repo-check` 事后兜底。
+
 ### 变更（新增子项目 blog：文章自动发布到藏经阁，2026-11-11）
 
 - **为什么改**：用户 2026-11-11 把 `xhqing/blog`（个人博客「藏经阁」）移交本项目作为子项目，同时提两条要求——① 本项目 `docs/articles/` 里**所有**文章都发到博客，**不看写完没写完**；② 每次 PR 更新文章内容就自动发布。此前这个仓库归 Kit（assistant-agent），2026-09-12 起一直挂在「已取消 / 已退役的子项目」名单里。
