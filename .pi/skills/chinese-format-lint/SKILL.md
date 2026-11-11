@@ -27,7 +27,7 @@ description: 中文 Markdown 稿件的确定性排版检查（13 条规则，附
 
 ```bash
 # 报告模式（默认：只报不改）——给 AI 读时加 --no-color，省掉 ANSI 转义
-node .claude/skills/chinese-format-lint/scripts/lint.mjs --no-color 文章.md 另一篇.md
+node .pi/skills/chinese-format-lint/scripts/lint.mjs --no-color 文章.md 另一篇.md
 ```
 
 **路径参数的边界（上游脚本的实际行为，实测）**：参数只接受**文件**，多个文件逐个列；不传参数时才递归扫描当前目录（跳过 `.git`、`node_modules`、`dist`、`build`、`coverage`）。把**目录**当参数传进去会报 `EISDIR`——要扫目录就 `cd` 到那个目录后不带参数跑。

@@ -28,7 +28,7 @@ description: 把 Markdown 文章写进微信公众号草稿箱（含 LaTeX 公�
 
 1. **凭证**：在「微信开发者平台」（`developers.weixin.qq.com/platform`）→ 我的业务 → 公众号/服务号 → 基础信息 → **开发密钥** 里拿 AppID / AppSecret（2025-09 起开发配置从 mp 后台迁移至此；AppSecret 忘记可点「重置」，新值只显示一次），写入 `~/.wechat-mp/config.json`（600 权限、不进 git）：
    ```bash
-   python3 .claude/skills/wechat-mp/scripts/setup_config.py
+   python3 .pi/skills/wechat-mp/scripts/setup_config.py
    ```
 2. **IP 白名单**：调用机器的**公网出口 IP** 必须加进「开发密钥」页的 **API IP 白名单**（与凭证同页），否则报 `40164`（具体 IP 会写在报错信息里）。三条实测确认的规则：① **白名单为空 = 全部调用被拒**（不会放行；与视频号 / 小店的「清空 = 关闭白名单」规则不同）；② **支持 IP 段**（实测 /16 段可保存并生效）——家宽等动态 IP 直接填覆盖漂移范围的大段，可免去每次重配；③ 变更约十分钟内生效。注意本机若配了代理（`HTTP_PROXY` 等），出口 IP 会变——脚本默认**绕过代理直连**，保证出口 IP 与白名单一致。
 3. **依赖**：`python3`（Pillow / requests / beautifulsoup4 / markdown-it-py / playwright）、本机 Google Chrome（Playwright 用 `channel="chrome"`）、KaTeX CSS/JS 走 jsDelivr CDN（渲公式时需联网）。
@@ -37,14 +37,14 @@ description: 把 Markdown 文章写进微信公众号草稿箱（含 LaTeX 公�
 
 ```bash
 # ① 本地构建 + 预览（不上传、不写草稿）
-python3 .claude/skills/wechat-mp/scripts/build_draft.py <article.md> \
+python3 .pi/skills/wechat-mp/scripts/build_draft.py <article.md> \
         --out tmp/mp-draft --preview --no-upload
 #    → content.html（正文）、preview.html / preview-NN.png（手机宽度预览切片）、math/（公式图）
 
 # ② 调版式：改 build_draft.py 顶部的 STYLE 字典 → 重跑 ① → 看切片
 
 # ③ 写进草稿箱（图片上传微信图床 + 封面素材 + draft/add）
-python3 .claude/skills/wechat-mp/scripts/build_draft.py <article.md> --out tmp/mp-draft
+python3 .pi/skills/wechat-mp/scripts/build_draft.py <article.md> --out tmp/mp-draft
 #    → 打印 ✅ media_id；公众号后台「草稿箱」可见
 
 # ④ 群里预览：手机微信 → 公众号 → 草稿箱 → 预览；确认后人工点「群发 / 发布」

@@ -6,7 +6,7 @@ node_modules/
 .DS_Store
 
 # Claude Code 个人本地配置（机器本地，不提交）
-.claude/settings.local.json
+.pi/settings.local.json
 
 # 本机私有指令（商业承接策略，不进 git、不公开；Claude Code 每次会话自动加载）
 AGENTS.local.md
