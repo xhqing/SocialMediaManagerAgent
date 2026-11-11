@@ -62,3 +62,10 @@
 - [ ] **T17** 每两周看一眼博客同步是否还在正常跑（记录：2026-11-11 15:20）
   **背景**：同步是定时任务，失败时博客不会报错，只是文章悄悄不再更新——这类静默故障最容易拖很久。
   **要做什么**：`gh run list -R xhqing/blog --workflow sync-articles.yml --limit 5` 看最近几次的结论；红了就看日志（多半是 social-agent 的文章结构变了，比如新增文章没写一级标题。）。
+
+- [ ] **T18** 逐个项目清理 `.claude/` 目录（其它 harness 遗留物，2026-11-11 立规）（记录：2026-11-11 16:35）
+  **背景**：用户 2026-11-11 定：团队只用 pi，Claude Code / CodeBuddy / Codex / DeepSeek Harness 等其它 harness 一律不维护，全局与所有项目的规则 / 工具里都要清理干净。全局侧当天已清完（`~/.claude` 只剩 Claude Code 自己的运行时目录、配置与技能已归档到本机私有目录；`~/.pi/agent` 的规则、文档、脚本同步改完并已发布 agents-infra 镜像）。项目侧只有本项目迁完（`.claude/skills` → `.pi/skills`，PR #58），其余 8 个 Agent 项目还留着 `.claude/`。
+  **要做什么**：逐个仓库照 social-agent 的 PR #58 做——`git mv .claude/skills .pi/skills`（有的项目是 `rules` / `commands` / `hooks`，迁到 `.pi/` 对应目录或按需废弃）、删掉 `.claude/`、AGENTS.md 里 `.claude/...` 路径改 `.pi/...`、技能文档里的运行命令路径同步改、`.gitignore` 的 `.claude/settings.local.json` 改 `.pi/`、CHANGELOG 记一笔、走 worktree + PR。**共享 skill（anysearch 等）不要动**——它们只有全局一份。
+  **涉及的仓库（2026-11-11 盘点）**：`DataAnalystAgent`（5 个跟踪文件）、`GrowthMarketerAgent`（4，含 `rules/` 与 `skills/`）、`quant-agent`（11）、`SiteBuilderAgent`（3）、`NeuralCoreAgent`（2，settings 类）、`BackendEngineerAgent`（2，settings 类）、`DigiVendAgent`（1）、`ProductStrategistAgent`（1）；`dev-agent` 下是空目录，直接删。
+  **注意**：settings 类的 `.claude/settings.json` / `settings.local*.json` 直接归档不迁（那些是 CC 的配置格式，pi 不读）；`GrowthMarketerAgent` 的 `.claude/rules/*.md` 是被 AGENTS.md 里 `@` 引用的规则文件，迁到 `.pi/rules/` 后要把引用路径一起改。
+
