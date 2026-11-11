@@ -12,10 +12,10 @@
 
 ```bash
 # 报告模式（只报不改）
-node .claude/skills/chinese-format-lint/scripts/lint.mjs --no-color 文章.md
+node .pi/skills/chinese-format-lint/scripts/lint.mjs --no-color 文章.md
 
 # 自动修机械项
-node .claude/skills/chinese-format-lint/scripts/lint.mjs --fix 文章.md
+node .pi/skills/chinese-format-lint/scripts/lint.mjs --fix 文章.md
 ```
 
 13 条规则、各项阈值的说明与处理流程见 `SKILL.md`。

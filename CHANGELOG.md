@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### 变更（技能目录从 `.claude/skills` 迁到 `.pi/skills`，2026-11-11）
+
+- **为什么改**：用户 2026-11-11 立规——团队只用 pi，Claude Code / CodeBuddy / Codex / DeepSeek Harness 等其它 harness 一律不维护，且要在全局与所有项目的规则 / 工具里清理干净。本项目的技能实体一直放在 `.claude/skills/`，`.pi/skills` 只是个指向它的软链接，属于典型的历史遗留。
+- **改了什么**：① `git mv .claude/skills .pi/skills`（63 个跟踪文件，含 `social-media` / `wechat-mp` / `video-editing` / 去 AI 味 / 语法与排版检查等本项目专属技能），删掉原来那个软链接，`.claude/` 目录整体移除；② `AGENTS.md` 里 10 处 `.claude/skills/` 引用改为 `.pi/skills/`，「通用能力从 `~/.claude/` 拿」那句改为指向全局 `~/.pi/agent/skills/`；③ 4 个技能文档（chinese-format-lint、wechat-mp、chinese-grammar-proofreader）里的运行命令路径同步改名；④ `.gitignore` 的 `.claude/settings.local.json` 改为 `.pi/settings.local.json`。
+- **影响**：技能的实际加载路径不变（pi 本来就按 `<项目>/.pi/skills/` 发现），只是不再绕一层软链接指向别的 harness 的目录；技能内容与行为零改动。
+
 ### 变更（补一条 blog 发版归属规则，记录漏发版的教训，2026-11-11）
 
 - **为什么改**：`settle-repo-check` 在会话静止时报了一条「有功能类改动但版本未发布: blog (v1.1.0, 5 个待发布提交)」。实测确认那 5 个提交（搭自动发布链路那轮）确实漏了发版：VERSION 已 bump 到 1.1.0，但 GitHub Release 没发，最后由用户自己补的（tag `v1.1.0` + Release 均已在 2026-11-11 15:29 完成，内容与当前 HEAD 一致）。

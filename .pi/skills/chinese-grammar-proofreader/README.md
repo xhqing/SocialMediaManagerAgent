@@ -86,7 +86,7 @@ chinese-grammar-proofreader/
 
 ```bash
 git clone https://github.com/orange4664/chinese-grammar-proofreader \
-  ~/.claude/skills/chinese-grammar-proofreader
+  ~/.pi/skills/chinese-grammar-proofreader
 ```
 
 然后在 Claude Code 里 `/chinese-grammar-proofreader`。
