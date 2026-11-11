@@ -202,8 +202,21 @@
 
 ## 子项目清单
 
-本项目负责的子项目如下（与全局 `~/.pi/agent/docs/agents-registry.md` 的“子项目映射”表保持一致）。**按 2026-10-30 用户修订的规则：智能体专属文件的实体只在 Agent 项目；子项目根目录挂 `AGENTS.md` 软链接（身份与项目保持一致）+ 真实 `.pi/` 目录（能力超集：`.pi/settings.json` 用路径引用本项目的 extensions / skills / prompts / themes 资源目录，子项目独有的技能 / 扩展放它自己的 `./extensions`、`./skills` 等目录），两者随仓库提交——在子项目目录开会话即继承 Gatsby 的身份与规则（Agent 进驻子项目），且子项目往 `.pi` 写东西只落在它自己目录里、不再污染本项目与兄弟子项目。**
+本项目负责的子项目如下（与全局 `~/.pi/agent/docs/agents-registry.md` 的“子项目映射”表保持一致）。
+
+**归属关系与文件规则（2026-11-08 新规，取代 2026-10-30 的软链超集）**：Agent 项目与子项目**两边完全独立**——子项目根目录放**本仓库实体**的 `AGENTS.md`（项目定位 / 负责 Agent / Worker 边界 / 规则索引）与 `.pi/APPEND_SYSTEM.md`（本项目硬约束），两者随仓库提交；**不挂 `AGENTS.md` 软链接、不写 `.pi/settings.json` 的跨仓库资源路径**。全局 `~/.pi/agent/` 那层（团队规则、add / commit 技能、各类守卫）在任何目录都会加载，所以拆掉交叉引用不会丢保护。细则见全局 `~/.pi/agent/docs/agents-registry.md`「智能体专属文件归属与子项目映射」。
 
 **Leader / Worker 分工（2026-11-07 全局规则）**：本项目根目录起的会话是 **Leader**（只做 local main 同步、建 worktree、派任务、收尾）；子项目根 / 子项目 worktree 起的会话是 **Worker**（干具体活并向 Leader 汇报）。`agent_call` / `agent_wake` 的 `dir` 允许 Agent 项目根 / 已登记子项目根 / 子项目的 git worktree 三类，启动带 `-a`。子项目专属硬规则写进各自的 `.pi/APPEND_SYSTEM.md`。详见全局 `~/.pi/agent/AGENTS.md`“Leader / Worker 分工”与 `~/.pi/agent/docs/agents-registry.md` 第 4 条。
 
-**本项目当前没有子项目**：原子项目 `xhs-mentor-scam` 已于 2026-11-02 移出团队名册——该仓含第三方个人信息（合同、私信截图、真实姓名、举报材料），按用户 2026-11-02 立的“团队项目一律 public、私有仓库不得入队”规则不能留在团队，作为用户个人私有项目保留（本地 `~/Developer/xhs-mentor-scam`、GitHub 私有远程 `xhqing/xhs-mentor-scam`、`autosave.sh` 自动备份均照旧）；仓库内的智能体专属文件（`AGENTS.md` 软链、`.pi/settings.json`）同日清理，按 2026-10-30 规则非 Agent 项目不得保留。要恢复为团队项目，须先把敏感材料拆分 / 脱敏并转为 public。
+| 子项目 | 仓库 | 说明 |
+|---|---|---|
+| **blog（藏经阁）** | `github.com/xhqing/blog`，本地 `~/Developer/blog` | 个人博客，docsify 站点，线上 <https://xhqing.github.io/blog>（GitHub Pages 从 `main` 分支的 `docs/` 目录直接发布）。**2026-11-11 由 Kit（assistant-agent）移交本项目**，用户当日要求“把所有文章都直接发布到这个博客上面，不论文章是否写完”。 |
+
+**blog 的内容双通道（2026-11-11 立）**：
+
+1. **手写**：直接改 `docs/post/<分类>/`；
+2. **自动同步**：本项目 `docs/articles/` 的全部文章 → 博客 `docs/post/`，由博客仓库的 `.github/workflows/sync-articles.yml` 每 10 分钟拉一次（也可手动触发）。**发布不比“写完没写完”**：源仓库是什么状态，博客上就是什么状态；同步产物带 `<!-- source: … -->` 标记，源文章改名 / 删除会跟随，手写文章不会被碰。同步脚本是博客仓库的 `scripts/sync_articles.py`。
+
+**对 Gatsby 的直接含义**：`docs/articles/` 下不再只是公众号稿，它同时是**公开发布源**——往这里放的内容（含草稿、含半成品）合并进 `main` 后最迟十分钟就会出现在公开博客上。要写不能公开的东西，放 `docs/articles/ai-trading/`（已 gitignore）或 `~/.dev/private/`，**不要放 `docs/articles/*.md`**。
+
+原子项目 `xhs-mentor-scam` 已于 2026-11-02 移出团队名册——该仓含第三方个人信息（合同、私信截图、真实姓名、举报材料），按用户 2026-11-02 立的“团队项目一律 public、私有仓库不得入队”规则不能留在团队，作为用户个人私有项目保留（本地 `~/Developer/xhs-mentor-scam`、GitHub 私有远程 `xhqing/xhs-mentor-scam`、`autosave.sh` 自动备份均照旧）；仓库内的智能体专属文件（`AGENTS.md` 软链、`.pi/settings.json`）同日清理，按 2026-10-30 规则非 Agent 项目不得保留。要恢复为团队项目，须先把敏感材料拆分 / 脱敏并转为 public。
