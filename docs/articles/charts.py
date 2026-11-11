@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""生成《利滚利的三个开关》一文的全部附图，并复核文中全部数字。
+"""生成复利系列文章（《怎么证明一个方法真的不亏》《押多少、做多少次》）的全部附图，并复核文中全部数字。
 
 运行：python3 docs/articles/charts.py
 输出：docs/articles/img/*.png
