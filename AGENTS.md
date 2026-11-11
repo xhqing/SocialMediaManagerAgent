@@ -219,4 +219,6 @@
 
 **对 Gatsby 的直接含义**：`docs/articles/` 下不再只是公众号稿，它同时是**公开发布源**——往这里放的内容（含草稿、含半成品）合并进 `main` 后最迟十分钟就会出现在公开博客上。要写不能公开的东西，放 `docs/articles/ai-trading/`（已 gitignore）或 `~/.dev/private/`，**不要放 `docs/articles/*.md`**。
 
+**blog 的发版归本项目**：改动含 `feat` / `fix` 且版本已就绪时走 `/release`（打 `vX.Y.Z` tag + GitHub Release，notes 取 `CHANGELOG` 对应条目）；日常文章同步的 `sync:` 提交不触发发版（2026-10-13 门禁）。**教训（2026-11-11）**：这轮走的是「裸 `git commit` + PR 合并」，绕过了 commit skill 第 10 步的自动发版衔接，于是 VERSION 已 bump 到 1.1.0、Release 却没发，靠 `settle-repo-check` 事后兜底才被发现（用户自己补发的）。所以：**合并含 feat / fix 的 PR 后，主动跑一次发版检查**（`gh release view v$(cat VERSION) -R <repo>`），别等提醒。
+
 原子项目 `xhs-mentor-scam` 已于 2026-11-02 移出团队名册——该仓含第三方个人信息（合同、私信截图、真实姓名、举报材料），按用户 2026-11-02 立的“团队项目一律 public、私有仓库不得入队”规则不能留在团队，作为用户个人私有项目保留（本地 `~/Developer/xhs-mentor-scam`、GitHub 私有远程 `xhqing/xhs-mentor-scam`、`autosave.sh` 自动备份均照旧）；仓库内的智能体专属文件（`AGENTS.md` 软链、`.pi/settings.json`）同日清理，按 2026-10-30 规则非 Agent 项目不得保留。要恢复为团队项目，须先把敏感材料拆分 / 脱敏并转为 public。
