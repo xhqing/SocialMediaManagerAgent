@@ -215,7 +215,7 @@
 **blog 的内容双通道（2026-11-11 立）**：
 
 1. **手写**：直接改 `docs/post/<分类>/`；
-2. **自动同步**：本项目 `docs/articles/` 的全部文章 → 博客 `docs/post/`，由博客仓库的 `.github/workflows/sync-articles.yml` 每 10 分钟拉一次（也可手动触发）。**发布不比“写完没写完”**：源仓库是什么状态，博客上就是什么状态；同步产物带 `<!-- source: … -->` 标记，源文章改名 / 删除会跟随，手写文章不会被碰。同步脚本是博客仓库的 `scripts/sync_articles.py`。
+2. **自动同步**：本项目 `docs/articles/` 的全部文章 → 博客 `docs/post/`，由博客仓库的 `.github/workflows/sync-articles.yml` 每 10 分钟拉一次（也可手动触发）。**发布不分“写完没写完”**：源仓库是什么状态，博客上就是什么状态；同步产物带 `<!-- source: … -->` 标记，源文章改名 / 删除会跟随，手写文章不会被碰。同步脚本是博客仓库的 `scripts/sync_articles.py`。
 
 **对 Gatsby 的直接含义**：`docs/articles/` 下不再只是公众号稿，它同时是**公开发布源**——往这里放的内容（含草稿、含半成品）合并进 `main` 后最迟十分钟就会出现在公开博客上。要写不能公开的东西，放 `docs/articles/ai-trading/`（已 gitignore）或 `~/.dev/private/`，**不要放 `docs/articles/*.md`**。
 
