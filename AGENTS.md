@@ -226,7 +226,7 @@ grep -nE "先把.{1,12}说清楚|这是.{1,20}不是|不是.{1,25}是|而是" <�
 
 | 子项目 | 仓库 | 说明 |
 |---|---|---|
-| **blog（藏经阁）** | `github.com/xhqing/blog`，本地 `~/Developer/blog` | 个人博客，docsify 站点，线上 <https://xhqing.github.io/blog>（GitHub Pages 从 `main` 分支的 `docs/` 目录直接发布）。**2026-11-11 由 Kit（assistant-agent）移交本项目**，用户当日要求“把所有文章都直接发布到这个博客上面，不论文章是否写完”。 |
+| **blog（藏经阁）** | `github.com/xhqing/blog`，本地 `~/Developer/blog` | 个人博客，docsify 站点，线上 <https://xhqing.github.io/blog>（GitHub Pages 从 `main` 分支的 `docs/` 目录直接发布）。**2026-11-11 由 Kit（assistant-agent）移交本项目**。当日“不论写完没写完都发布”的要求已于 2026-11-13 作废，现行发布规则见下方发布红线。 |
 
 **blog 的内容双通道（2026-11-13 修订）**：
 
