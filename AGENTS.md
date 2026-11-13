@@ -228,12 +228,14 @@ grep -nE "先把.{1,12}说清楚|这是.{1,20}不是|不是.{1,25}是|而是" <�
 |---|---|---|
 | **blog（藏经阁）** | `github.com/xhqing/blog`，本地 `~/Developer/blog` | 个人博客，docsify 站点，线上 <https://xhqing.github.io/blog>（GitHub Pages 从 `main` 分支的 `docs/` 目录直接发布）。**2026-11-11 由 Kit（assistant-agent）移交本项目**，用户当日要求“把所有文章都直接发布到这个博客上面，不论文章是否写完”。 |
 
-**blog 的内容双通道（2026-11-11 立）**：
+**blog 的内容双通道（2026-11-13 修订）**：
 
 1. **手写**：直接改 `docs/post/<分类>/`；
-2. **自动同步**：本项目 `docs/articles/` 的全部文章 → 博客 `docs/post/`，由博客仓库的 `.github/workflows/sync-articles.yml` 每 10 分钟拉一次（也可手动触发）。**发布不分“写完没写完”**：源仓库是什么状态，博客上就是什么状态；同步产物带 `<!-- source: … -->` 标记，源文章改名 / 删除会跟随，手写文章不会被碰。同步脚本是博客仓库的 `scripts/sync_articles.py`。
+2. **同步**：本项目 `docs/articles/` → 博客 `docs/post/`，脚本是博客仓库的 `scripts/sync_articles.py`，只碰带 `<!-- source: … -->` 标记的文件，不碰手写文章。同步 workflow 已去掉定时触发，只保留需显式确认的 `workflow_dispatch`。
 
-**对 Gatsby 的直接含义**：`docs/articles/` 下不再只是公众号稿，它同时是**公开发布源**——往这里放的内容（含草稿、含半成品）合并进 `main` 后最迟十分钟就会出现在公开博客上。要写不能公开的东西，放 `docs/articles/ai-trading/`（已 gitignore）或 `~/.dev/private/`，**不要放 `docs/articles/*.md`**。
+**发布红线（2026-11-13 用户立）**：没有用户当轮明确同意，不能往博客发布任何文章；未完成的文章不发。`docs/articles/` 里的文章只是稿件，落盘不等于发布；触发同步 workflow 前必须取得用户同意。2026-11-11 的旧口径「发布不分写完没写完」已作废，当日同步过去的 6 篇文章与配图已于 2026-11-13 全部撤下。
+
+**对 Gatsby 的直接含义**：`docs/articles/` 是稿件区，不是公开发布源。要写不能公开的东西，放 `docs/articles/ai-trading/`（已 gitignore）或 `~/.dev/private/`，**不要放 `docs/articles/*.md`**。
 
 **blog 的发版归本项目**：改动含 `feat` / `fix` 且版本已就绪时走 `/release`（打 `vX.Y.Z` tag + GitHub Release，notes 取 `CHANGELOG` 对应条目）；日常文章同步的 `sync:` 提交不触发发版（2026-10-13 门禁）。**教训（2026-11-11）**：这轮走的是「裸 `git commit` + PR 合并」，绕过了 commit skill 第 10 步的自动发版衔接，于是 VERSION 已 bump 到 1.1.0、Release 却没发，靠 `settle-repo-check` 事后兜底才被发现（用户自己补发的）。所以：**合并含 feat / fix 的 PR 后，主动跑一次发版检查**（`gh release view v$(cat VERSION) -R <repo>`），别等提醒。
 
